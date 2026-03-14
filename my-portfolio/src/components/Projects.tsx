@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Benchmarking from "../assets/images/Benchmarking.png";
 import Todo from "../assets/images/Todo.png";
-import Chatbot from "../assets/images/Chatbot.png";
+import Chatbot from "../assets/images/ChatBgggggot.png";
 
 
 const projectsData = [
