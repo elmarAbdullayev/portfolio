@@ -1,9 +1,22 @@
+/* Inter comes with the site itself, so no visitor data goes to Google Fonts (DSGVO) */
+@import "@fontsource-variable/inter";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-dark-bg text-white;
+    @apply bg-dark-bg text-white font-sans antialiased;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

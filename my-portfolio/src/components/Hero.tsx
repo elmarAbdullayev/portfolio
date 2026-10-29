@@ -1,21 +1,33 @@
 import { motion } from "framer-motion";
-import CV_Deutsch from "../assets/CV_Deutsch.pdf"
+import Lebenslauf from "../assets/Lebenslauf_Elmar_Abdullayev.pdf"
+import { GitHubIcon, LinkedInIcon } from "./Icons";
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
+    <section id="top" className="min-h-screen flex items-center justify-center px-4 pt-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="max-w-4xl mx-auto text-center"
       >
+        {/* Status */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.8 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-dark-border bg-dark-card/60 text-sm text-gray-300"
+        >
+          <span className="w-2 h-2 rounded-full bg-accent"></span>
+          Hamburg · offen für Junior-Stellen
+        </motion.span>
+
         {/* Name mit Gradient */}
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
         >
           Elmar Abdullayev
         </motion.h1>
@@ -27,7 +39,7 @@ function Hero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-2xl md:text-3xl font-semibold text-gray-300 mb-6"
         >
-          Full-Stack Developer
+          Full-Stack Developer · KI & Automatisierung
         </motion.h2>
 
         {/* Beschreibung */}
@@ -37,8 +49,8 @@ function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Ich entwickle moderne Web-Applikationen mit React, TypeScript und FastAPI.
-          Meine Leidenschaft liegt darin, benutzerfreundliche und skalierbare Lösungen zu schaffen.
+          Ich entwickle Web-Apps mit React, TypeScript und FastAPI und verbinde sie mit KI und Automatisierung –
+          von der Lebenslauf-Prüfung mit der Claude API bis zum WhatsApp-Bot für Restaurants.
         </motion.p>
 
         {/* Buttons */}
@@ -52,22 +64,22 @@ function Hero() {
             href="#projects"
             className="px-8 py-3 bg-primary hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
           >
-            View Projects
+            Projekte ansehen
           </a>
 
           <a
             href="#contact"
             className="px-8 py-3 bg-dark-card hover:bg-gray-800 text-white font-medium rounded-lg border border-dark-border transition-all duration-300 transform hover:scale-105"
           >
-            Contact Me
+            Kontakt
           </a>
 
           <a
-            href={CV_Deutsch}
-            download
+            href={Lebenslauf}
+            download="Lebenslauf_Elmar_Abdullayev.pdf"
             className="px-8 py-3 bg-transparent hover:bg-dark-card text-primary font-medium rounded-lg border border-primary transition-all duration-300 transform hover:scale-105"
           >
-            Download CV
+            Lebenslauf (PDF)
           </a>
         </motion.div>
 
@@ -82,22 +94,20 @@ function Hero() {
             href="https://github.com/elmarAbdullayev"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
             className="text-gray-400 hover:text-white transition-colors duration-300"
           >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 ..."/> {/* gekürzt */}
-            </svg>
+            <GitHubIcon />
           </a>
 
           <a
             href="https://www.linkedin.com/in/elmar-abdullayev-65b02b253/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className="text-gray-400 hover:text-white transition-colors duration-300"
           >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 ..."/> {/* gekürzt */}
-            </svg>
+            <LinkedInIcon />
           </a>
         </motion.div>
       </motion.div>

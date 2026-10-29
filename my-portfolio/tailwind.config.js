@@ -17,7 +17,7 @@ export default {
         accent: '#10b981',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"Inter Variable"', 'Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

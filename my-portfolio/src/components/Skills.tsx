@@ -3,23 +3,33 @@ import { motion } from "framer-motion";
 const skillsData = {
   technical: [
     {
-      category: "Frontend Development",
-      skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS", "Tailwind CSS", "Bootstrap", "Redux", "jQuery"],
+      category: "Frontend",
+      skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS", "Tailwind CSS", "Redux", "Vite", "Bootstrap", "jQuery"],
       color: "from-blue-500 to-cyan-500"
     },
     {
-      category: "Backend Development",
-      skills: ["Python", "FastAPI", "RESTful APIs"],
+      category: "Backend",
+      skills: ["Python", "FastAPI", "REST-APIs", "Pydantic", "SQLAlchemy", "JWT", "Java", "Spring Boot"],
       color: "from-green-500 to-emerald-500"
     },
     {
-      category: "Databases & Data",
-      skills: ["MySQL", "PostgreSQL", "SQL", "Alembic"],
+      category: "KI & Automatisierung",
+      skills: ["Claude API", "Structured Outputs", "n8n", "Groq", "Ollama", "WhatsApp Cloud API", "Webhooks", "Claude Code"],
+      color: "from-pink-500 to-orange-400"
+    },
+    {
+      category: "Datenbanken",
+      skills: ["PostgreSQL", "MySQL", "SQLite", "SQL", "Alembic"],
       color: "from-purple-500 to-pink-500"
     },
     {
+      category: "Microsoft 365",
+      skills: ["SharePoint Online", "Microsoft Teams", "Entra ID", "PowerShell", "PnP.PowerShell", "SPFx"],
+      color: "from-sky-500 to-blue-600"
+    },
+    {
       category: "Tools & DevOps",
-      skills: ["Git", "GitHub", "Docker", "Linux", "Postman", "UML"],
+      skills: ["Git", "GitHub", "Docker", "pytest", "Linux", "Postman", "Vercel", "UML"],
       color: "from-orange-500 to-red-500"
     }
   ],
@@ -35,7 +45,7 @@ const skillsData = {
 
 function Skills() {
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section id="skills" className="scroll-mt-16 px-4 py-24">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Section Title */}
@@ -46,7 +56,7 @@ function Skills() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
         >
-          Skills & Technologies
+          Skills & Technologien
         </motion.h2>
 
         <motion.p
@@ -69,10 +79,10 @@ function Skills() {
             className="text-2xl font-semibold text-white mb-8 flex items-center gap-3"
           >
             <span className="w-2 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></span>
-            Technical Skills
+            Technische Skills
           </motion.h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillsData.technical.map((category, index) => (
               <motion.div
                 key={category.category}
@@ -85,8 +95,8 @@ function Skills() {
                 <div className="h-full p-6 rounded-2xl bg-dark-card border border-dark-border hover:border-primary/50 transition-all duration-300">
                   
                   {/* Category Header */}
-                  <div className={`inline-block px-4 py-2 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-10 mb-4`}>
-                    <h4 className={`text-lg font-semibold bg-gradient-to-r ${category.color} bg-clip-text`}>
+                  <div className="inline-block px-4 py-2 rounded-lg bg-white/5 border border-dark-border mb-4">
+                    <h4 className={`text-lg font-semibold bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}>
                       {category.category}
                     </h4>
                   </div>
